@@ -1,0 +1,72 @@
+Act as a business analyst with the skills of Google Sheet manipulation to bring business KPIs etc.I have a Retail Sales Dataset in Google Sheets. I want to perform a complete KPI analysis using my existing data.
+
+Please analyze my dataset and calculate the following KPIs using Google Sheets formulas. Do not change or delete my original data.
+
+Step 1: Inspect the dataset
+
+- Identify all column names and their positions.
+- Identify the columns for Order ID, Order Date, Region, Product Category, Product Name, Quantity, Sales, Profit, and Discount.
+- Check for missing values, duplicate records, incorrect data types, and unusual values.
+- Use the actual column names and cell ranges in my spreadsheet. Do not assume column positions without checking.
+
+Step 2: Calculate the following KPIs
+
+1. Total Sales: Sum of all Sales values.
+2. Total Profit:Sum of all Profit values.
+3. Total Orders:Count of unique Order IDs.
+4. Total Quantity Sold: Sum of Quantity, excluding blank values.
+5. Profit Margin (%):Total Profit divided by Total Sales, multiplied by 100.
+6. Average Order Value (AOV):Total Sales divided by the number of unique orders.
+7. Average Profit per Order:Total Profit divided by the number of unique orders.
+8. Average Discount (%): Average of the valid Discount values. Clarify whether the values are stored as percentages or decimals.
+9. Monthly Sales:Total Sales grouped by month and year.
+10. Monthly Profit:Total Profit grouped by month and year.
+11. Monthly Sales Growth (%): Percentage change in sales compared with the previous month. Handle the first month and zero-sales months correctly.
+12. Year-over-Year Sales Growth (%): Compare each complete year with the previous complete year. Clearly flag incomplete years.
+13. Sales by Product Category:Total Sales and percentage contribution of each category to overall sales.
+14. Profit by Product Category: Total Profit and Profit Margin for each category.
+15. Regional Performance: Total Sales, Total Profit, Total Orders, and Profit Margin for each region.
+16. Top 5 Products by Sales: Rank products by total Sales and show their total Profit and Quantity Sold.
+17. Top 5 Products by Profit: Rank products by total Profit and show their Sales and Profit Margin.
+18. Discount Analysis: Compare average discount, sales, and profit by discount level. Identify unusually high discounts and investigate their relationship with profitability.
+
+For each KPI, provide:
+
+1. KPI name
+2. Business definition
+3. Exact Google Sheets formula
+4. Explanation of the formula
+5. Result
+6. Business interpretation
+
+Use formulas that reference the actual columns in my sheet. If the formula uses a helper column or a separate summary sheet, explain how to create it.
+
+Step 4: Create a KPI Summary sheet
+
+Create a new sheet named "KPI Summary" containing:
+
+- Total Sales
+- Total Profit
+- Total Orders
+- Total Quantity Sold
+- Profit Margin
+- Average Order Value
+- Average Profit per Order
+- Average Discount
+
+Below these KPI cards, create summary tables for monthly trends, category performance, regional performance, and top-performing products.
+
+Use formulas linked to the original data so the results update automatically when new records are added. Prefer open-ended ranges or suitable dynamic ranges.
+
+Important rules:
+
+- Never invent results or fabricate missing values.
+- Do not treat blank quantities as zero when calculating average quantity.
+- Do not count blank Order IDs as orders.
+- Use unique Order IDs for order counts.
+- Avoid double-counting if an order contains multiple line items.
+- Use weighted calculations where appropriate and explain the difference between a simple average and a weighted average.
+- Check the formulas against the original data.
+- Clearly flag data-quality problems and incomplete reporting periods.
+
+Start by inspecting the dataset and identifying the actual column names before calculating anything.
