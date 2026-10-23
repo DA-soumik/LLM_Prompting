@@ -1,0 +1,137 @@
+Act as an experienced Business Analyst specializing in retail sales analytics, customer segmentation, and business intelligence.
+
+I have uploaded a Diwali Sales Dataset in CSV or Excel format. Analyze the actual uploaded dataset and calculate all relevant KPIs using the available columns. Do not invent data, change the original data, or assume that unavailable fields exist.
+
+ Step 1: Inspect the dataset
+
+1. Identify the number of rows, columns, and all column names.
+2. Identify the fields corresponding to customer ID, customer name, product ID, gender, age group, age, marital status, state, zone, occupation, product category, orders, and amount.
+3. Check for missing values, duplicate rows, invalid values, inconsistent category names, and completely empty columns.
+4. Explain the data-quality issues and recommend a cleaning process.
+5. Preserve the original dataset and perform analysis on a separate working copy.
+6. Do not delete or modify original records.
+
+ Step 2: Calculate the core KPIs
+
+Calculate the following wherever supported by the dataset:
+
+1. Total Sales Amount.
+2. Average Sales Amount per Record.
+3. Median Sales Amount.
+4. Total Unique Customers.
+5. Total Recorded Orders Count, clearly explaining how the Orders column is interpreted.
+6. Average Sales Amount per Unique Customer.
+7. Highest and Lowest Sales Amount per Record.
+8. Sales by Gender.
+9. Sales by Age Group.
+10. Sales by Marital Status.
+11. Sales by State.
+12. Sales by Zone.
+13. Sales by Occupation.
+14. Sales by Product Category.
+15. Sales by Product ID, if useful.
+16. Percentage Contribution of Each Segment to Total Sales.
+17. Customer Count and Average Sales Amount for each relevant segment.
+
+For every KPI, provide:
+- KPI name and business purpose.
+- Mathematical formula.
+- Actual calculated value from the uploaded data.
+- Google Sheets formula using the actual column names and correct column references.
+- Business interpretation.
+- Any assumptions or limitations.
+
+Step 3: Perform customer and product analysis
+
+1. Identify the top five states by sales.
+2. Identify the top five product categories by sales.
+3. Identify the top five occupations by sales.
+4. Identify the highest-sales age group.
+5. Compare customer counts with sales amounts for each major segment.
+6. Identify high-contribution and low-contribution segments.
+7. Compare total sales and average sales across customer groups.
+8. Distinguish high sales caused by more customer records from high average sales per customer.
+9. Recommend potential customer segments for targeted festive campaigns, using evidence from the data.
+
+ Step 4: Use Google Sheets formulas
+
+Provide formulas that work in Google Sheets.
+
+- Use SUM and SUMIF for sales calculations.
+- Use COUNTUNIQUE for distinct customer counts.
+- Use AVERAGE and MEDIAN for descriptive statistics.
+- Use COUNTBLANK for missing-value checks.
+- Use COUNTIF, SUMIFS, QUERY, FILTER, or pivot tables where appropriate.
+- Use absolute references when necessary.
+- Clearly state the cell ranges and assumed column locations.
+- Handle missing values carefully and avoid counting the same customer repeatedly.
+- If a formula depends on a helper column, explain how to create it.
+- Keep the original dataset unchanged and place the analysis in a separate sheet.
+
+ Step 5: Create a KPI summary sheet
+
+Design a separate sheet named KPI Summary with these columns:
+
+KPI Name | Definition | Formula | Calculated Value | Business Interpretation
+
+Include the core KPIs and the most useful customer and product segmentation metrics.
+
+ Step 6: Create an analytical dashboard plan
+
+Recommend suitable charts for a Google Sheets dashboard:
+
+- KPI cards for Total Sales, Unique Customers, Average Sales per Record, and Recorded Orders Count.
+- Bar chart for Sales by State.
+- Bar chart for Sales by Product Category.
+- Column chart for Sales by Age Group.
+- Bar chart for Sales by Occupation.
+- Column chart for Sales by Gender.
+- Zone-level sales comparison.
+- Filters or slicers for Gender, Age Group, State, Zone, Occupation, and Product Category, where supported.
+
+Explain how to build each chart and which columns to use.
+
+ Step 7: Provide business insights and recommendations
+
+Write at least five evidence-based insights.
+
+For each insight, provide:
+- The observed pattern.
+- The supporting KPI or calculated figure.
+- Its possible business significance.
+- A practical recommendation.
+- Any limitations in the available evidence.
+
+Do not claim that correlation proves causation.
+
+ Step 8: Identify unavailable KPIs
+
+Check whether the dataset contains the necessary fields for profit margin, revenue growth, month-over-month growth, average order value, customer retention, conversion rate, and inventory turnover.
+
+For each unsupported KPI:
+- Explain why it cannot be calculated reliably.
+- Identify the additional data fields needed.
+- Give the formula that could be used once the required data is available.
+
+Do not fabricate missing values or treat the sum of the Orders column as the number of unique transactions without verification.
+
+ Final output format
+
+Present the report in this order:
+
+1. Executive Summary.
+2. Dataset Structure and Data Quality.
+3. KPI Definitions and Actual Calculations.
+4. Customer Segmentation Analysis.
+5. Product and Geographic Analysis.
+6. Google Sheets Formulas.
+7. Dashboard Design.
+8. Key Business Insights.
+9. Actionable Recommendations.
+10. Limitations and Additional Data Required.
+
+Use tables wherever useful. Show currency values in Indian Rupees (₹), percentages to two decimal places, and numerical results with appropriate rounding.
+
+Use only the uploaded dataset for calculated results. Clearly distinguish verified findings, assumptions, and recommendations. If you cannot execute a calculation directly, provide the correct formula and explicitly state that the result has not been verified.
+
+Do not change or delete my original data.
