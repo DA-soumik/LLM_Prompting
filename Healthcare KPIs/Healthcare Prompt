@@ -1,1 +1,163 @@
+I have a healthcare dataset in Google Sheets. Act as a Senior Business Analyst and perform a comprehensive Healthcare KPI Analysis using my existing data.
 
+ 1. Inspect the dataset
+
+First, inspect the entire dataset and identify:
+
+- All sheet names, column names, column positions, and data types.
+- The fields for Patient_ID, Admit_Date, Discharge_Date, Diagnosis, Bed_Occupancy, Test, Doctor, Followup Date, Feedback, Billing Amount, and Health Insurance Amount.
+- The total number of records and unique patient IDs.
+- Missing values, duplicate rows, duplicate patient IDs, invalid dates, inconsistent category names, and incorrect data types.
+- Any anomalies, such as discharge dates earlier than admission dates or invalid follow-up dates.
+
+Do not assume that a column is valid merely because it is not blank. Clearly distinguish missing, invalid, and suspicious values.
+
+ 2. Protect the original data
+
+- Do not delete, overwrite, rearrange, or modify any original data.
+- Do not remove duplicate records automatically.
+- Perform the analysis in a separate sheet named `KPI Analysis`.
+- Create additional sheets named `KPI Details`, `Data Quality`, and `Dashboard` if needed.
+- Use Google Sheets-compatible formulas, including SUM, COUNTIF, SUMIF, AVERAGEIF, COUNTUNIQUE, FILTER, QUERY, IFERROR, and other appropriate functions.
+- Make formulas dynamic so they include future records where practical.
+- Clearly state the assumptions behind each KPI.
+
+ 3. Calculate the key healthcare KPIs
+
+ Patient KPIs
+- Total patient records
+- Unique patients
+- Total admissions
+- Patients by diagnosis
+- Patients by doctor
+- Patients by bed category
+- Monthly admission trends
+
+ Financial KPIs
+- Total billing amount
+- Average billing amount per patient record
+- Median billing amount
+- Highest and lowest bill
+- Total health insurance amount
+- Average insurance amount
+- Patient payable amount, calculated as billing minus recorded insurance amount
+- Insurance coverage percentage
+- Billing by diagnosis
+- Billing by doctor
+- Billing by diagnostic test
+- Monthly billing and month-over-month billing growth
+
+Do not describe billing as revenue collected, insurance as cash received, or billing minus insurance as confirmed collections unless the dataset contains evidence of actual payments.
+
+ Operational KPIs
+- Length of stay for each patient, calculated as Discharge_Date minus Admit_Date
+- Average, median, minimum, and maximum length of stay
+- Patients with stays exceeding 7 days and 14 days
+- Average length of stay by diagnosis, doctor, and bed category
+- Monthly admission trends
+- Follow-up date validity and follow-up tracking metrics
+
+ Patient satisfaction KPIs
+- Average feedback score
+- Feedback score distribution
+- Number and percentage of records with feedback of at least 4.5 out of 5
+- Feedback by doctor, diagnosis, and bed category
+
+Define satisfaction thresholds clearly and do not claim that feedback proves clinical quality.
+
+ Doctor and diagnostic service KPIs
+- Patient count by doctor
+- Billing and average bill by doctor
+- Patient count by diagnostic test
+- Total and average billing by diagnostic test
+- Diagnosis distribution
+- Bed category distribution
+
+Do not rank doctors by clinical performance using billing alone. Explain the limitations of comparisons without case complexity, outcomes, staffing, or other relevant data.
+
+ 4. Provide the exact Google Sheets formulas
+
+For every KPI, provide:
+
+1. KPI name
+2. Business definition
+3. Calculation formula
+4. Exact Google Sheets formula using the actual sheet name and column references
+5. Expected output format, such as currency, percentage, count, or days
+6. Business interpretation
+7. Any limitations or assumptions
+
+Test formulas for compatibility with Google Sheets. Do not provide Excel-only formulas without a Google Sheets alternative.
+
+Use bounded ranges or efficient formulas where appropriate. Avoid formulas that create unnecessary performance problems.
+
+ 5. Create summary tables
+
+Create separate summary tables for:
+
+- Monthly admissions and billing
+- Diagnosis-wise patient count and billing
+- Doctor-wise patient count, billing, and average feedback
+- Bed-category-wise patient count and billing
+- Diagnostic-test-wise patient count and billing
+- Feedback distribution
+- Data-quality issues
+
+Use formulas or pivot tables, whichever is more appropriate.
+
+ 6. Build a management dashboard
+
+Create a professional healthcare dashboard on a separate sheet with KPI cards for:
+
+- Total patients
+- Total billing
+- Average bill per patient record
+- Total insurance amount
+- Insurance coverage percentage
+- Average length of stay
+- Average patient feedback
+- Invalid follow-up date count
+
+Include appropriate charts:
+- Monthly admission trend
+- Monthly billing trend
+- Billing by diagnosis
+- Billing by doctor
+- Patient distribution by bed category
+- Diagnostic test distribution
+- Patient feedback distribution
+
+Use clear chart titles, labels, appropriate number formats, consistent styling, and a layout suitable for hospital management.
+
+Add date filters or other interactive controls where practical. Ensure that the dashboard updates when the source data grows.
+
+Do not calculate a standard bed occupancy rate without available bed capacity and bed-day information. Do not calculate profit margin without expense data.
+
+ 7. Explain the findings
+
+Provide an executive summary containing:
+
+- Five major findings
+- Important trends and unusual patterns
+- Potential operational improvement opportunities
+- Financial observations
+- Patient satisfaction observations
+- Data-quality concerns
+- Recommended next steps for hospital management
+
+Clearly separate facts calculated from the dataset from recommendations or hypotheses.
+
+ 8. Final validation
+
+Before completing the analysis:
+
+- Verify that all formulas reference the correct columns.
+- Reconcile total billing and insurance amounts against the original data.
+- Check that summary totals agree with the underlying records.
+- Validate date calculations and percentages.
+- Identify any unsupported KPIs that cannot be calculated from the available columns.
+- Confirm that the original data remains unchanged.
+
+Finally, provide a concise KPI dictionary, the completed Google Sheets formulas, the dashboard structure, and the main business insights.
+
+Start by inspecting the actual workbook. Do not invent results, columns, or values. If you cannot directly edit my Google Sheet, provide the exact formulas, table layouts, and step-by-step instructions needed to implement the analysis.
