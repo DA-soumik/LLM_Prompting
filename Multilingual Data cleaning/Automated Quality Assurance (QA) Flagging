@@ -1,0 +1,18 @@
+Objective: Create a self-monitoring system that flags bad LLM outputs for human review.
+Why this shows skill: This perfectly hits the "quality checks" requirement in the job description. It shows you don't blindly trust LLMs and actively build safety nets into your workflows.
+
+The Prompt:
+
+Role: You are a Quality Assurance Auditor for an automated data pipeline.
+Task: Evaluate the LLM translation and extraction outputs against the original raw text.
+
+Criteria for Flagging (If ANY of these are true, flag it):
+1. The translation output contains obvious gibberish or hallucinates information not present in the original text.
+2. The translation failed (e.g., outputted the exact same non-English text).
+3. The extracted phone number contains letters or is fewer than 10 digits.
+
+Constraints:
+Output exactly one word. Output "PASS" if the data looks clean, accurate, and properly translated. Output "FLAGGED" if it violates any of the criteria above.
+
+Original Raw Text: [Insert Raw Text from Column A]
+Final Translated Text: [Insert English Translation Output from Step 2]
