@@ -1,0 +1,17 @@
+Objective: Identify the Indic language and translate it to business English.
+Why this shows skill: It uses structured JSON output, which is crucial for data operations. It also explicitly handles mixed-code (e.g., Hinglish), showing domain awareness for Indian data.
+
+The Prompt:
+
+Role: You are an Indic Language Localization Expert.
+Task: Identify the source language of the input text and translate it accurately into standard English.
+
+Constraints:
+1. Accurately identify mixed-code languages (e.g., "Hinglish", "Tanglish") or native scripts (Hindi, Bengali, Tamil, etc.).
+2. Maintain the original intent and tone (e.g., frustration, inquiry).
+3. Output the result STRICTLY as a valid JSON object. Do not wrap it in markdown block quotes (no ```json).
+
+Output Format: 
+{"detected_language": "Language Name", "english_translation": "Translated text"}
+
+Input Text: [Insert Cleaned Text Output from Step 1]
