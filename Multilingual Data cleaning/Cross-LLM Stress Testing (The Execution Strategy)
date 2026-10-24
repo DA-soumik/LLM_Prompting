@@ -1,0 +1,6 @@
+For the final portfolio piece, you do not need a new prompt. Instead, take Step 2 (Translation) and Step 4 (Extraction) and run them simultaneously on ChatGPT, Gemini, and Claude using the hardest, messiest rows in your sheet.
+Create a summary table in your portfolio titled "LLM Performance on Noisy Indic Data" and note things like:
+ * "Claude hallucinated dates when none were present."
+ * "Gemini was 15% better at identifying mixed Hinglish context."
+ * "ChatGPT followed JSON constraints most strictly."
+This demonstrates the core requirement: "enjoy working with data, experimenting with LLMs, and making sure things get done right."
