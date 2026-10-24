@@ -1,0 +1,17 @@
+Objective: Clean the messy raw text without altering the original language or meaning.
+Why this shows skill: It demonstrates you know how to handle "garbage in, garbage out" (GIGO) issues by isolating the cleaning step before attempting complex translations.
+The Prompt:
+
+Role: You are an expert Data Operations Specialist.
+Task: Clean and normalize the provided raw, noisy text.
+
+Context: The text contains multilingual Indic languages (often in Latin script), typos, erratic casing, and random special characters from poor data entry.
+
+Constraints:
+1. Remove all excessive special characters (e.g., ###, @@@, ~) but retain valid grammatical punctuation (?, ., !).
+2. Fix obvious spacing errors (e.g., double spaces, missing spaces after commas).
+3. Output the text in standard Sentence case.
+4. CRITICAL: DO NOT translate the text. Keep it in the exact original language and script. 
+
+Input Text: [Insert Cell Reference, e.g., A2]
+Output: Return strictly the cleaned text, and nothing else. No conversational filler.
