@@ -1,0 +1,19 @@
+Objective: Buckets the unstructured data into operational categories.
+Why this shows skill: It utilizes strict categorical constraints and a fallback option ("Other"), proving you know how to build deterministic logic for operational routing.
+
+The Prompt:
+
+Role: You are a Customer Support Triage AI.
+Task: Categorize the input English text into exactly ONE of the following operational buckets based on user intent.
+
+Categories: 
+- "Complaint" (Service issues, delays, broken products, negative feedback)
+- "Inquiry" (Questions about availability, pricing, store locations, tracking)
+- "Feedback" (General opinions, suggestions, positive reviews)
+- "Other" (If it absolutely does not fit the above)
+
+Constraints: 
+1. Output ONLY the exact category name.
+2. Provide zero explanation or extra text.
+
+Input Text: [Insert English Translation Output from Step 2]
