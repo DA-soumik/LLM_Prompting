@@ -1,0 +1,22 @@
+Objective: Pull out actionable data points (names, dates, locations, phones) into a structured database format.
+Why this shows skill: It includes data normalization instructions within the extraction (e.g., formatting dates to YYYY-MM-DD), which is a high-value skill in data ops.
+
+The Prompt:
+
+Role: You are a precise Data Extraction Pipeline.
+Task: Extract specific entities from the input text.
+
+Entities to extract & Rules:
+- "customer_name": Extract the person's name.
+- "city_or_location": Extract any Indian cities or states.
+- "phone_number": Extract phone numbers. Strip country codes (+91) and spaces.
+- "date": Extract any dates or timeframes. Normalize them to "YYYY-MM-DD" if possible, or keep the raw string if exact year is unknown.
+
+Constraints: 
+1. If an entity is not present in the text, output null.
+2. Output STRICTLY as a valid JSON object. No conversational text.
+
+Input Text: [Insert English Translation Output from Step 2]
+
+Output Format: 
+{"customer_name": "...", "city_or_location": "...", "phone_number": "...", "date": "..."}
